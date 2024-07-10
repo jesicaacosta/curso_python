@@ -33,3 +33,6 @@ print(type (alias))
 agee = input('How old are you? ') 
 
 print('Tu edad es ',agee)
+
+#operadores 
+
