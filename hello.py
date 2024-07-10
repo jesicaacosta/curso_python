@@ -30,47 +30,48 @@ name, surname, age, alias = 'Jesica' , 'Acosta' , 30 , 'jesidaiq'
 print ('Mi nombre es ' ,name, surname, 'tengo ' , age, 'Instagram es ' ,alias)
 print(type (alias))
 
-agee = input('How old are you? ') 
+#agee = input('How old are you? ') 
 
-print('Tu edad es ',agee)
 
 #operadores 
 
 ### Operadores Aritméticos ###
 
 # Operaciones con enteros
-print(10 // 3)
-print(2 ** 3)
-print(2 ** 3 + 3 - 7 / 1 // 4)
+a = 200
+b = 5
+remainder = a % b
+floor_division = a // b
+exponential = a ** b
+
+# Floating numbers
+print('Floating Number,PI', 3.14)
+print('Floating Number, gravity', 9.81)
+
+# Complex numbers
+print('Complex number: ', 1 + 1j)
+print('Multiplying complex number: ',(1 + 1j) * (1-1j))
 
 #Operaciones con cadenas de texto
 print("Hola " + str(5))
 
 # Operaciones mixtas
-print("Hola " * 5)
-print("Hola " * (2 ** 3))
+print("Hola - " * 5) #Hola Hola Hola Hola Hola
+print("Hola " * (2 ** 2))
 
-my_float = 2.5 * 2
-print("Hola " * int(my_float))
+my_float = 2.5 * 2 ##el resultado es 5 
+print("Hola my_float" * int(my_float)) #multiplica 5 veces el string
 
 ### Operadores Comparativos ###
 
 print("Operaciones con enteros")
-print(3 > 4)
-print(3 < 4)
-print(3 >= 4)
-print(4 <= 4)
-print(3 == 4)
-print(3 != 4)
-
-print(" Operaciones con cadenas de texto")
-print("Hola" > "Python")
-print("Hola" < "Python")
+print(3 == 4) #false 
+print(3 != 4) #true 
+print("Hola" > "Python") #false 
 print("aaaa" >= "abaa")  # Ordenación alfabética por ASCII
 print(len("aaaa") >= len("abaa"))  # Cuenta caracteres
 print("Hola" <= "Python")
 print("Hola" == "Hola")
-print("Hola" != "Python")
 
 ### Operadores Lógicos ###
 
