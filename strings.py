@@ -49,23 +49,21 @@ print(d) # h
 print(e) # o
 print(f) # n
 print (g*5 + ' ' + f*6)
-print ('----------------------- ')
 
-# Accessing characters in strings by index
+
+print('\n\n·········· Accessing characters in strings by index ········· ')
 language = 'Python'
 first_letter = language[0]
 print(first_letter) # P
 second_letter = language[1]
 print(second_letter) # y
-last_index = len(language) - 1
+last_index = len(language) - 1 
+# Índices negativos:  -6 -5 -4 -3 -2 -1
+# Elementos:          P  y  t  h  o  n
+# Índices positivos:  0  1  2  3  4  5
 last_letter = language[last_index]
 print(last_letter) # n
 
-print ('----------------------- ')
-
-#input('Ingrese su nombre')
-
- 
 # If we want to start from right end we can use negative indexing. -1 is the last index
 language = 'Python'
 last_letter = language[-1]
@@ -73,7 +71,8 @@ print(last_letter) # n
 second_last = language[-2]
 print(second_last) # o
 
-# Slicing
+
+print('\n\n·········· Slicing (dividir ········· ')
 
 language = 'Python'
 first_three = language[0:3] # starts at zero index and up to 3 but not include 3
@@ -85,13 +84,20 @@ print(last_three)   # hon
 last_three = language[3:]
 print(last_three)   # hon
 
-# Skipping character while splitting Python strings
-language = 'Python'
-pto = language[0:6:2] # 
-print(pto) # pto
+
+print('\n\n·········· Skipping character while splitting (segmentación) Python strings ········· ')
+#secuencia[start:stop:step]
+#start: Índice de inicio de la segmentación (incluido).
+#stop: Índice de fin de la segmentación (excluido).
+#step: Número de pasos a tomar entre cada índice.
+
+skipping = 'Lklklklklk'
+pto = skipping[0:10:2] 
+print(pto) # Lllll
 
 
-# Escape sequence
+print('\n\n·········· Escape sequence ········· ')
+
 print('I hope every one enjoying the python challenge.\nDo you ?') # line break
 print('Days\tTopics\tExercises')
 print('Day 1\t3\t5')
@@ -100,14 +106,19 @@ print('Day 3\t3\t5')
 print('Day 4\t3\t5')
 print('This is a back slash  symbol (\\)') # To write a back slash
 print('In every programming language it starts with \"Hello, World!\"')
+#debe haber un \ para que tome el escape siguiente
 
-"""
-## String Methods
+
+print('\n\n·········· String Methods ········· ')
+
+print('\n\n·········· capitalize ········· ')
 # capitalize(): Converts the first character the string to Capital Letter
 
 challenge = 'thirty days of python'
+print(challenge) # 'thirty days of python'
 print(challenge.capitalize()) # 'Thirty days of python'
 
+print('\n\n·········· count ········· ')
 # count(): returns occurrences of substring in string, count(substring, start=.., end=..)
 
 challenge = 'thirty days of python'
@@ -115,25 +126,34 @@ print(challenge.count('y')) # 3
 print(challenge.count('y', 7, 14)) # 1
 print(challenge.count('th')) # 2`
 
+
+print('\n\n·········· endswith ········· ')
+
 # endswith(): Checks if a string ends with a specified ending
 
 challenge = 'thirty days of python'
-print(challenge.endswith('on'))   # True
-print(challenge.endswith('tion')) # False
+print(challenge.endswith('hon')) # True
+print("La palabra finaliza con 'a'? {} " .format( challenge.endswith('a')) )  
+print(f"La palabra finaliza con 'a'? {challenge.endswith('a')}") #solo para python 3.6
 
+print('\n\n·········· expandstabs ········· ')
 # expandtabs(): Replaces tab character with spaces, default tab size is 8. It takes tab size argument
 
 challenge = 'thirty\tdays\tof\tpython'
 print(challenge.expandtabs())   # 'thirty  days    of      python'
-print(challenge.expandtabs(10)) # 'thirty    days      of        python'
+print(challenge.expandtabs(15)) # 'thirty    days      of        python'
 
+print('\n\n·········· find ········· ')
 # find(): Returns the index of first occurrence of substring
 
 challenge = 'thirty days of python'
-print(challenge.find('y'))  # 5
-print(challenge.find('th')) # 0
-"""
 
+print(challenge.find('y'))  # 5
+print(challenge.find('t')) # 0
+
+
+
+print('\n\n·········· String Methods ········· ')
 
 # format()	formats string into nicer output    
 first_name = 'Asabeneh'
@@ -142,10 +162,8 @@ job = 'teacher'
 country = 'Finland'
 sentence = f'I am {first_name} {last_name}. I am a {job}. I live in {country}.' #mejor forma sin formatear
 print(sentence) # I am Asabeneh Yetayeh. I am a teacher. I live in Finland.
-
 ago = 30
-print ( 'I am %s %s I am a %s I ago in %i'%(first_name, last_name, job, ago )) #mejor forma formateando el tipo de dato
-
+print ('I am %s %s I am a %s I ago in %i'%(first_name, last_name, job, ago )) #mewjor forma para establecer el tipo de dato
 
 
 radius = 10
@@ -156,10 +174,6 @@ print(result) # The area of circle with 10 is 314.0
 resultado = radius + area
 print ( ' el resultado es %s ' %(resultado))
 print ( ' el resultado es %i ' %(resultado))
-resultadoDos = resultado + 'Re'
-print ( ' el resultado es %s ' %(resultadoDos))
-print ( ' el resultado es %i ' %(resultadoDos))
-"""
 
 
 # index(): Returns the index of substring
@@ -167,19 +181,22 @@ challenge = 'thirty days of python'
 print(challenge.find('y'))  # 5
 print(challenge.find('th')) # 0
 
+
+print('\n\n·········· isalnum ········· ')
+
 # isalnum(): Checks alphanumeric character
+#Verifica si todos los caracteres en la cadena son alfanuméricos 
+# (letras y números) y no está vacía.
 
 challenge = 'ThirtyDaysPython'
 print(challenge.isalnum()) # True
-
-challenge = '30DaysPython'
-print(challenge.isalnum()) # True
-
+challenge = 'ThirtyDaysPython!34'
+print(challenge.isalnum()) # False
 challenge = 'thirty days of python'
 print(challenge.isalnum()) # False
 
-challenge = 'thirty days of python 2019'
-print(challenge.isalnum()) # False
+
+print('\n\n·········· isalpha ········· ')
 
 # isalpha(): Checks if all characters are alphabets
 
@@ -188,34 +205,44 @@ print(challenge.isalpha()) # True
 num = '123'
 print(num.isalpha())      # False
 
+print('\n\n·········· isdecimal ········· ')
+
 # isdecimal(): Checks Decimal Characters
 
-challenge = 'thirty days of python'
-print(challenge.find('y'))  # 5
-print(challenge.find('th')) # 0
+num = '10'
+print(num.isdecimal()) # True, porque '10' son dígitos decimales.
+num = '10.5'
+print(num.isdecimal()) # False, porque '10.5' tiene un punto decimal.
 
-# isdigit(): Checks Digit Characters
 
-challenge = 'Thirty'
+print('\n\n·········· isdigit ········· ')
+# isdigit(): Checks Digit Characters , si todos son numeros
+challenge = 'Thirty1'
 print(challenge.isdigit()) # False
 challenge = '30'
-print(challenge.digit())   # True
+print(challenge.isdigit())   # True
 
+
+print('\n\n·········· isdecimal ········· ')
 # isdecimal():Checks decimal characters
-
 num = '10'
 print(num.isdecimal()) # True
 num = '10.5'
 print(num.isdecimal()) # False
 
 
+print('\n\n·········· isidentifier ········· ')
 # isidentifier():Checks for valid identifier means it check if a string is a valid variable name
+#verifica si una cadena puede ser utilizada como un identificador válido, como el nombre de 
+# una variable.Debe comenzar con una letra o guion bajo y puede contener letras, números o guiones bajos.
 
 challenge = '30DaysOfPython'
 print(challenge.isidentifier()) # False, because it starts with a number
 challenge = 'thirty_days_of_python'
 print(challenge.isidentifier()) # True
 
+
+print('\n\n·········· islower ········· ')
 
 # islower():Checks if all alphabets in a string are lowercase
 
@@ -224,7 +251,9 @@ print(challenge.islower()) # True
 challenge = 'Thirty days of python'
 print(challenge.islower()) # False
 
-# isupper(): returns if all characters are uppercase characters
+print('\n\n·········· isupper ········· ')
+
+# isupper(): Checks if all characters are uppercase characters
 
 challenge = 'thirty days of python'
 print(challenge.isupper()) #  False
@@ -232,50 +261,68 @@ challenge = 'THIRTY DAYS OF PYTHON'
 print(challenge.isupper()) # True
 
 
+print('\n\n·········· isnumeric ········· ')
+
 # isnumeric():Checks numeric characters
 
 num = '10'
 print(num.isnumeric())      # True
 print('ten'.isnumeric())    # False
 
+
+print('\n\n·········· join ········· ')
+
 # join(): Returns a concatenated string
+#Une una lista de cadenas con un separador especificado.
 
 web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
-result = '#, '.join(web_tech)
-print(result) # 'HTML# CSS# JavaScript# React'
+result = ' ★ \t'.join(web_tech)
+print(result) # HTML ★  CSS ★   JavaScript ★    React
+result = ' , '.join(web_tech)
+print(result) #HTML , CSS , JavaScript , React
 
+
+print('\n\n·········· strip ········· ')
 # strip(): Removes both leading and trailing characters
+#Elimina los caracteres especificados del principio y el
+# final de la cadena. Por defecto, elimina espacios.
 
 challenge = ' thirty days of python '
-print(challenge.strip('y')) # 5
+print(challenge.strip()) # 5
 
+print('\n\n·········· REPLACE ········· ')
 # replace(): Replaces substring inside
 
 challenge = 'thirty days of python'
-print(challenge.replace('python', 'coding')) # 'thirty days of coding'
+print(challenge.replace('py', 'Agregado')) # elimina py,agrega agregado y y lo que resta
 
+
+print('\n\n·········· split ········· ')
 # split():Splits String from Left
-
+#Divide la cadena en una lista usando un separador. Por defecto, usa cualquier espacio en blanco.
 challenge = 'thirty days of python'
 print(challenge.split()) # ['thirty', 'days', 'of', 'python']
 
-# title(): Returns a Title Cased String
 
+
+# title(): Returns a Title Cased String
+#Convierte la primera letra de cada palabra en mayúscula y el resto en minúscula.
 challenge = 'thirty days of python'
 print(challenge.title()) # Thirty Days Of Python
 
-# swapcase(): Checks if String Starts with the Specified String
-  
+
+# swapcase(): Change all lowercase letters to uppercase and vice versa.
+#Cambia todas las letras minúsculas por mayúsculas y viceversa.
+
 challenge = 'thirty days of python'
 print(challenge.swapcase())   # THIRTY DAYS OF PYTHON
 challenge = 'Thirty Days Of Python'
 print(challenge.swapcase())  # tHIRTY dAYS oF pYTHON
 
-# startswith(): Checks if String Starts with the Specified String
 
+# startswith(): Checks if String Starts with the Specified String
+#Verifica si la cadena comienza con la subcadena especificada.
 challenge = 'thirty days of python'
 print(challenge.startswith('thirty')) # True
 challenge = '30 days of python'
 print(challenge.startswith('thirty')) # False
-
-"""
