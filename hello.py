@@ -71,14 +71,23 @@ print("Hola" > "Python") #false
 print("aaaa" >= "abaa")  # Ordenación alfabética por ASCII
 print(len("aaaa") >= len("abaa"))  # Cuenta caracteres
 print("Hola" <= "Python")
+print("Hola" != "Hola")
 print("Hola" == "Hola")
+print("aaa" <= "aaa") #ordena alfabeticamente por ascii
+print("aa" >= "zz")
 
 ### Operadores Lógicos ###
-
 print("Basada en el Álgebra de Boole https://es.wikipedia.org/wiki/%C3%81lgebra_de_Boole ")
 print(3 > 4 and "Hola" > "Python")
 print(3 > 4 or "Hola" > "Python")
 print(3 < 4 and "Hola" < "Python")
 print(3 < 4 or "Hola" > "Python")
 print(3 < 4 or ("Hola" > "Python" and 4 == 4))
-print(not (3 > 4))
+print(not 3 > 2)     # False - because 3 > 2 is true, then not True gives False
+print(not True)      # False - Negation, the not operator turns true to false
+print(not False)     # True
+print(not not True)  # True
+print(not not False) # False
+
+#strings 
+
